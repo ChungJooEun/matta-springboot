@@ -1,5 +1,6 @@
 package com.matta.matta_springboot.domain.post;
 
+import com.matta.matta_springboot.domain.user.User;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "POST_ID")
+    @Column(name = "POST_ID")
     private Long id;
 
     @Column(columnDefinition = "TEXT", nullable = false)
@@ -34,13 +35,13 @@ public class Post {
     @JoinColumn(name = "USER_ID")
     private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "RESTAURANT_ID")
-    private Restaurant restaurant;
-
-    @OneToOne
-    @JoinColumn(name = "STARRATING_ID", nullable = false)
-    private StarRating starRating;
+//    @ManyToOne
+//    @JoinColumn(name = "RESTAURANT_ID")
+//    private Restaurant restaurant;
+//
+//    @OneToOne
+//    @JoinColumn(name = "STARRATING_ID", nullable = false)
+//    private StarRating starRating;
 
 //    @ManyToOne
 //    private Folder folder;
