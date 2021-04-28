@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    font-family: 'helvetica neue', 'Apple SD Gotgic Neo', Roboto, Arial, sans-serif;
+}
+
+body {
+    background: #fafafa;
+    padding: 0;
+    margin: 0;
+}
+
+p, span {
+    font-size: 14px;
+}
+
+#main_wrap{
+    witth: 100%;
+}
+
+#main_left_wrap{
+    float: left;
+    width: 15%;
+    margin: 0 auto;
+}
+
+#main_center_wrap{
+    float: left;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+#main_right_wrap{
+    float: left;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.icon-location{
+    border-radius: 100%;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.pic {
+    border-radius: 100%;
+}
+
+span.point-span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #262626;
+}
+
+.feeds {
+    width: 90%;
+    margin-right: 10px;
+    margin-right: 34px;
+    display: inline-block;
+}
+
+article {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #DBDBDB;
+    margin-bottom: 60px;
+}
+
+header {
+    height: 60px;
+    paddig: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.locationInfo-of-article {
+    display: flex;
+    align-items: center;
+}
+
+.icon-location {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fafafa;
+    border-radius: 100%;
+}
+
+span.location-name {
+    maring-right: 5px;
+    margin-left: 14px;
+}
+
+.main-image img {
+    width: 100%;
+}
+
+.icon-more {
+    justify-self: end;
+}
+
+.icons-left {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.description {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    height: 18px;
+}

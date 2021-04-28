@@ -1,17 +1,20 @@
 package com.matta.matta_springboot.domain.post;
 
+import com.matta.matta_springboot.domain.BaseTimeEntity;
 import com.matta.matta_springboot.domain.user.User;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Post {
+public class Post extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,15 +28,16 @@ public class Post {
     private String comment;
 
     @Column(nullable = false)
-    private LocalDateTime occurDateTime;
+    private LocalDate visitedDate;
 
     @Enumerated(EnumType.STRING)
+//    @Column(nullable = false, columnDefinition = "default 'STATUS_POST'")
     @Column(nullable = false)
-    private PostsStatus postsStatus;
+    private PostsStatus postsStatus = PostsStatus.POST;
 
-    @ManyToOne
-    @JoinColumn(name = "USER_ID")
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "USER_ID")
+//    private User user;
 
 //    @ManyToOne
 //    @JoinColumn(name = "RESTAURANT_ID")
@@ -46,6 +50,17 @@ public class Post {
 //    @ManyToOne
 //    private Folder folder;
 
+    @Builder
+    public Post(String content, String comment, LocalDate visitedDate){
+        this.content = content;
+        this.comment = comment;
+        this.visitedDate = visitedDate;
+    }
 
+    // post update method 추가
+
+    public String getPostsStatusKey(){
+        return this.postsStatus.getKey();
+    }
 
 }
