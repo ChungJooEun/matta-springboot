@@ -13,6 +13,7 @@ public class StarRating {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "STARRATING_ID")
     private Long starRatingId;
 
     @Column(nullable = false)
