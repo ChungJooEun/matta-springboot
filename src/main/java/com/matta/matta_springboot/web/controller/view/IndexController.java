@@ -1,4 +1,4 @@
-package com.matta.matta_springboot.web;
+package com.matta.matta_springboot.web.controller.view;
 
 import com.matta.matta_springboot.config.auth.LoginUser;
 import com.matta.matta_springboot.config.auth.dto.SessionUser;
