@@ -14,7 +14,7 @@ public class StarRating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "STARRATING_ID")
-    private Long starRatingId;
+    private Long id;
 
     @Column(nullable = false)
     private int moodRating;

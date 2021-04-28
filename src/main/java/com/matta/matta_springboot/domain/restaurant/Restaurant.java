@@ -25,8 +25,7 @@ public class Restaurant {
     private String name;
 
     @Builder
-    public Restaurant(Long id, Address address, String name){
-        this.id = id;
+    public Restaurant(Address address, String name){
         this.address = address;
         this.name = name;
     }

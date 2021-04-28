@@ -24,8 +24,7 @@ public class Address {
     private BigDecimal lng;
 
     @Builder
-    public Address(Long id, BigDecimal lat, BigDecimal lng){
-        this.id = id;
+    public Address(BigDecimal lat, BigDecimal lng){
         this.lat = lat;
         this.lng = lng;
     }
