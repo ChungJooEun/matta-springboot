@@ -22,4 +22,9 @@ public class PostApiController {
     public Long update(@PathVariable Long id, @RequestBody PostUpdateRequestDto requestDto){
         return postService.update(id, requestDto);
     }
+
+    @PutMapping("/api/v1/post/delete/{id}")
+    public Long delete(@PathVariable Long id) {
+        return postService.delete(id);
+    }
 }

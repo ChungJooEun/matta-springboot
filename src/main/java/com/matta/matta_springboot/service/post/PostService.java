@@ -27,16 +27,23 @@ public class PostService {
 
     @Transactional
     public List<PostListResponseDto> findAllDesc() {
-        return postRepository.findAllDesc().stream()
+
+        return postRepository.findAllPostStatusDesc().stream()
                 .map(post -> new PostListResponseDto(post))
                 .collect(Collectors.toList());
     }
 
     @Transactional
     public Long update(Long id, PostUpdateRequestDto requestDto){
-
         Post post = postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id = " + id));
         post.update(requestDto.getComment(), requestDto.getContent(), requestDto.getVisitedDate());
+
+        return id;
+    }
+
+    @Transactional
+    public Long delete(Long id){
+        postRepository.deletePost(id);
 
         return id;
     }
