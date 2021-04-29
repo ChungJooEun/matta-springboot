@@ -57,10 +57,15 @@ public class Post extends BaseTimeEntity {
         this.visitedDate = visitedDate;
     }
 
-    // post update method 추가
-
     public String getPostsStatusKey(){
         return this.postsStatus.getKey();
+    }
+
+    // post update method 추가
+    public void update(String comment, String content, LocalDate visitedDate){
+        this.comment = comment;
+        this.content = content;
+        this.visitedDate = visitedDate;
     }
 
 }
