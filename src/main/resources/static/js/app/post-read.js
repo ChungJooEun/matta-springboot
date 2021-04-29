@@ -1,11 +1,3 @@
-var moveUpdatePage = function() {
-
-    var postId = $('#id').val();
-    var url = '/post/update/' + postId;
-
-    location.href = url;
-};
-
 var main = {
 
     init: function() {
@@ -15,6 +7,11 @@ var main = {
         // 삭제
         $('#btn-delete').on('click', function() {
             _this.delete();
+        });
+
+        // 수정
+        $('#btn-go-update').on('click', function() {
+            _this.update();
         });
     },
     delete : function() {
@@ -29,8 +26,11 @@ var main = {
         }).fail(function(error) {
             alert(JSON.stringify(error));
         });
-    }
+    },
+    update : function() {
 
+        location.href = '/post/update/' + $('#id').val();
+    }
 };
 
 main.init();
