@@ -1,0 +1,52 @@
+{{>layout/header}}
+
+<!-- DatePicker -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
+<!-- content -->
+<div id="main_wrap">
+
+    <div class="wrap" id="main_center_wrap">
+        <div class="col-md-12">
+            <div class="col-md-12">
+
+                <h1>게시글 수정 </h1>
+                <form>
+                    <div class="form-group">
+                        <label for="id">글 번호</label>
+                        <input type="text" class="form-control" id="id" value="{{post.id}}" readonly>
+                    </div>
+
+                    <!--  방문 날짜 -->
+                    <div class="form-group">
+                        <label for="visitedDay"> 방문 날짜 </label>
+                        <input type="text" class="form-control" id="visitedDate" value="{{post.visitedDate}}" readonly>
+                    </div>
+
+                    <!-- 글 내용 -->
+                    <div class="form-group content-div">
+                        <label for="content"> 내용 </label>
+                        <textarea class="form-control" id="content" readonly>{{post.content}}</textarea>
+                    </div>
+
+                    <!--  한줄 코멘트 -->
+                    <div class="form-group">
+                        <label for="comment"> 한줄 코멘트 </label>
+                        <input type="text" class="form-control" id="comment" value="{{post.comment}}" readonly>
+                    </div>
+
+                </form>
+
+                <a href="/" role="button" class="btn btn-light">목록 보기</a>
+                <button type="button" class="btn btn-primary" id="btn-go-update" onclick="moveUpdatePage();">수정 하기</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/app/post-read.js">
+{{>layout/footer}}
