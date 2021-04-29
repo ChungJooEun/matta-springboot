@@ -16,6 +16,10 @@ var initDatePicker = function(){
     });
 };
 
+var setDate = function() {
+  $("#visitedDate").datepicker("setDate", new Date());
+};
+
 var parseToLocalDate = function(){
     return $('#visitedDate').val().replace(/\./gi, "-");
 };
@@ -25,6 +29,7 @@ var main = {
 
     init : function(){
         initDatePicker();
+        setDate();
 
         var _this = this;
         $('#btn-posts-save').on('click',function(){
