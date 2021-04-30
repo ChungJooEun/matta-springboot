@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")//TODO: CORS 이슈가 해결되는지 확인하고 적용할지 선택하기.
 @RequiredArgsConstructor
 @RestController
 public class PostApiController {
